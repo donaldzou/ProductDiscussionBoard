@@ -1,0 +1,21 @@
+body {
+    font-family: sans-serif;
+}
+
+.LoginFrame{
+    margin: 3rem auto;
+    max-width: 600px;
+}
+
+.DiscussionModule{
+    max-width: 600px !important;
+    padding-top: 2rem;
+}
+
+.fullButton{
+    width: 100%;
+}
+
+.LoginHeader{
+    text-align: center;
+}
