@@ -10,13 +10,14 @@ export const LoginForm = () => {
     const [error, defineError] = useState(false)
     var error_msg = ""
     function submit(e){
+        const login_btn = document.getElementById("login_btn")
+        login_btn.innerHTML = "Login..."
+        login_btn.setAttribute("disabled","disabled")
         e.preventDefault()
         if (email.length === 0 || password.length === 0){
             document.getElementById("error_alert").innerHTML = "Please fill in all textbox."
             return
         }
-
-
         Meteor.loginWithPassword(email, password, function(exception){
             if (exception){
                 document.getElementById("error_alert").innerHTML = "Oops! Your email and password does not match."
@@ -24,6 +25,8 @@ export const LoginForm = () => {
             }else{
                 Session.set("email", email)
             }
+            login_btn.innerHTML = "Login"
+            login_btn.removeAttribute("disabled")
         })
     }
     return(
@@ -44,7 +47,7 @@ export const LoginForm = () => {
                     <Form.Control type="password" placeholder="password" value={password} onChange={(event) => definePassword(event.target.value)} required/>
                 </FloatingLabel>
             </Form.Group>
-            <Button variant="primary" type="submit" className="fullButton">Login</Button>
+            <Button variant="primary" type="submit" className="fullButton" id="login_btn">Login</Button>
         </ Form>
     )
 }

@@ -11,6 +11,4 @@ export const LoginModule = () => {
             </div>
         </Container>
     )
-
-
 }

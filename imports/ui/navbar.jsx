@@ -6,7 +6,9 @@ import { useTracker } from 'meteor/react-meteor-data';
 
 function Logout(e){
     Meteor.logout(function(err){
-        console.log(err);
+        if (err){
+            console.log(err)
+        }
     });
 }
 

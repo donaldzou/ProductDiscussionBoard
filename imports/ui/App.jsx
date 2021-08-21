@@ -4,9 +4,7 @@ import { NavBar } from "./navbar.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Meteor } from 'meteor/meteor'
 import { useTracker } from 'meteor/react-meteor-data';
-import {DiscussionModule} from "./DiscussionModule";
-
-
+import { DiscussionModule } from "./DiscussionModule.jsx";
 
 
 export function App(){
@@ -21,21 +19,4 @@ export function App(){
             )}
         </div>
     )
-
-
-
-    // if (Meteor.user()){
-    //     return (
-    //         <div>
-    //             <NavBar/>
-    //         </div>
-    //     )
-    // }else {
-    //     return(
-    //         <div>
-    //             <NavBar/>
-    //             <LoginModule/>
-    //         </div>
-    //     )
-    // }
 }

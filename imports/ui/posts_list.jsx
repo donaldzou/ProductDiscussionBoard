@@ -10,7 +10,7 @@ export function PostList(){
         return PostsCollection.find().fetch().reverse()
     })
 
-    for (var i = 0; i < posts.length; i++){
+    for (let i = 0; i < posts.length; i++){
         let time = new Date(posts[i].time)
         let hour = time.getHours()
         let minute = time.getMinutes()

@@ -16,16 +16,13 @@ Meteor.startup(() => {
             password: "steve"
         })
     }
-
-
     // Initializing Comments
     if (PostsCollection.find().count() === 0){
         PostsCollection.insert({
             id: Random.id,
-            content: "Hello Word!!!",
+            content: "Hello World!!!",
             user_id: "johnny@appleseed.com",
             time: Date.now()
         })
     }
-
 });
