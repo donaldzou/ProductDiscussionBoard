@@ -17,7 +17,7 @@ export const NavBar = (props) => {
     return (
         <Navbar bg="light" expand="lg" sticky="top">
             <Container>
-                <Navbar.Brand href="#home">Discussion Board</Navbar.Brand>
+                <Navbar.Brand href="#">Discussion Board</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">

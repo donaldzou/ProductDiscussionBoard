@@ -1,9 +1,7 @@
 import React from "react";
 import { useTracker } from 'meteor/react-meteor-data';
 import { PostsCollection } from "../api/posts.js";
-import {Card, Button} from "react-bootstrap";
-
-
+import {Card} from "react-bootstrap";
 
 export function PostList(){
     let posts = useTracker( () => {
@@ -40,7 +38,7 @@ export function PostList(){
                             }</strong> said:</Card.Header>
                             <Card.Body>
                                 <Card.Text>{post.content}</Card.Text>
-                                <p><small className="text-muted">{post.time}</small></p>
+                                <p style={{ marginBottom: 0 }}><small className="text-muted">{post.time}</small></p>
                             </Card.Body>
                         </Card>
                     )

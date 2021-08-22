@@ -10,7 +10,6 @@ export function PostTextbox(props){
         const post_textbox = document.getElementById("post_textbox");
         return post_textbox.value.length > 0
     }
-
     function submit(e){
         const send_btn = document.getElementById("post_send_btn")
         const post_textbox = document.getElementById("post_textbox");
@@ -29,15 +28,13 @@ export function PostTextbox(props){
                     post_textbox.removeAttribute("disabled")
                 }
             }
-
-
         }
     }
 
 
     return(
         <Form onSubmit={submit}>
-            <FloatingLabel id="comment_label" label="Leave your comment here ;)">
+            <FloatingLabel id="comment_label" label="Type your post here :)">
                 <Form.Control onChange={
                     (event) => definePost(event.target.value)
                 } as="textarea" placeholder="Leave your comment here" style={{ height: '200px' }} className="mb-3" id="post_textbox" required/>
